@@ -1,0 +1,35 @@
+[project]
+name = "image-clef-med-caption-task-2026"
+version = "0.1.0"
+description = "Project Repository for my Image CLEF 2026 Tasks"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "bert-score>=0.3.13",
+    "bleurt-pytorch @ git+https://github.com/lucadiliello/bleurt-pytorch.git",
+    "evaluate>=0.4.6",
+    "ipykernel>=7.2.0",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.4",
+    "open-clip-torch>=3.3.0",
+    "pandas>=3.0.2",
+    "peft>=0.19.1",
+    "pillow>=12.2.0",
+    "rouge-score>=0.1.2",
+    "scikit-learn>=1.8.0",
+    "timm>=1.0.26",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "tqdm>=4.67.3",
+    "transformers==4.57.1",
+    "xformers>=0.0.35",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
